@@ -169,6 +169,9 @@ namespace request {
     static const std::string ping = "ping";
     static const std::string send_raw_query = "send_raw_query";
     static const std::string pause_or_resume = "pause_or_resume";
+    static const std::string pause = "pause";
+    static const std::string resume = "resume";
+    static const std::string play = "play";
     static const std::string stop = "stop";
     static const std::string previous = "previous";
     static const std::string next = "next";

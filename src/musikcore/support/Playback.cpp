@@ -67,6 +67,15 @@ namespace musik {
                     transport.Pause();
                 }
             }
+            void Play(ITransport& transport) {
+                transport.Play();
+            }
+            void PauseOrResume(ITransport& transport) {
+                transport.Pause();
+            }
+            void PauseOrResume(ITransport& transport) {
+                transport.Resume();
+            }
 
             void VolumeUp(ITransport& transport) {
                 double delta = round(transport.Volume() * 100.0) >= 10.0 ? 0.05 : 0.01;

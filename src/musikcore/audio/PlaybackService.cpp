@@ -805,6 +805,18 @@ void PlaybackService::PauseOrResume() {
     }
 }
 
+void PlaybackService::Pause() {
+    transport->Pause();
+}
+
+void PlaybackService::Resume() {
+    transport->Resume();
+}
+
+void PlaybackService::Play() {
+    this->Play(this->index);
+}
+
 bool PlaybackService::IsMuted() {
     return transport->IsMuted();
 }

@@ -307,6 +307,21 @@ void WebSocketServer::HandleRequest(connection_hdl connection, json& request) {
             this->RespondWithSuccess(connection, request);
             return;
         }
+        if (name == request::pause) {
+            context.playback->Pause();
+            this->RespondWithSuccess(connection, request);
+            return;
+        }
+        if (name == request::resume) {
+            context.playback->Resume();
+            this->RespondWithSuccess(connection, request);
+            return;
+        }
+        if (name == request::play) {
+            context.playback->Play();
+            this->RespondWithSuccess(connection, request);
+            return;
+        }
         else if (name == request::stop) {
             context.playback->Stop();
             this->RespondWithSuccess(connection, request);

@@ -98,6 +98,9 @@ namespace musik { namespace core { namespace audio {
             double GetVolume() override;
             void SetVolume(double vol) override;
             void PauseOrResume() override;
+            void Resume() override;
+            void Pause() override;
+            void Play() override;
             bool IsMuted() override;
             void ToggleMute() override;
             double GetPosition() override;

@@ -62,6 +62,7 @@ namespace musik { namespace core { namespace audio {
             virtual std::string Uri() = 0;
 
             virtual void Stop() = 0;
+            virtual void Play() = 0;
             virtual bool Pause() = 0;
             virtual bool Resume() = 0;
 
